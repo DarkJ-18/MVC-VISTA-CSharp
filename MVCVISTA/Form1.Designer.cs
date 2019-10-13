@@ -40,6 +40,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtcodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btncambios = new System.Windows.Forms.Button();
+            this.btneliminar = new System.Windows.Forms.Button();
+            this.btncancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtregistros)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,6 +57,7 @@
             this.dtregistros.Name = "dtregistros";
             this.dtregistros.Size = new System.Drawing.Size(488, 150);
             this.dtregistros.TabIndex = 3;
+            this.dtregistros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtregistros_CellContentClick);
             // 
             // Id
             // 
@@ -88,12 +92,13 @@
             // btnguardar
             // 
             this.btnguardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnguardar.Location = new System.Drawing.Point(18, 204);
+            this.btnguardar.Location = new System.Drawing.Point(12, 204);
             this.btnguardar.Name = "btnguardar";
-            this.btnguardar.Size = new System.Drawing.Size(75, 28);
+            this.btnguardar.Size = new System.Drawing.Size(115, 28);
             this.btnguardar.TabIndex = 15;
             this.btnguardar.Text = "Guardar";
             this.btnguardar.UseVisualStyleBackColor = true;
+            this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
             // txttelefono
             // 
@@ -116,7 +121,7 @@
             // 
             this.txtnombre.Location = new System.Drawing.Point(99, 120);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre.Size = new System.Drawing.Size(206, 20);
             this.txtnombre.TabIndex = 12;
             // 
             // label3
@@ -146,11 +151,47 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Codigo";
             // 
+            // btncambios
+            // 
+            this.btncambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncambios.Location = new System.Drawing.Point(133, 204);
+            this.btncambios.Name = "btncambios";
+            this.btncambios.Size = new System.Drawing.Size(139, 28);
+            this.btncambios.TabIndex = 16;
+            this.btncambios.Text = "Guardar Cambios";
+            this.btncambios.UseVisualStyleBackColor = true;
+            this.btncambios.Click += new System.EventHandler(this.btncambios_Click);
+            // 
+            // btneliminar
+            // 
+            this.btneliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btneliminar.Location = new System.Drawing.Point(278, 204);
+            this.btneliminar.Name = "btneliminar";
+            this.btneliminar.Size = new System.Drawing.Size(115, 28);
+            this.btneliminar.TabIndex = 17;
+            this.btneliminar.Text = "Eliminar";
+            this.btneliminar.UseVisualStyleBackColor = true;
+            this.btneliminar.Click += new System.EventHandler(this.btneliminar_Click);
+            // 
+            // btncancelar
+            // 
+            this.btncancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncancelar.Location = new System.Drawing.Point(399, 204);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(115, 28);
+            this.btncancelar.TabIndex = 18;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = true;
+            this.btncancelar.Click += new System.EventHandler(this.btncancelar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 453);
+            this.ClientSize = new System.Drawing.Size(523, 453);
+            this.Controls.Add(this.btncancelar);
+            this.Controls.Add(this.btneliminar);
+            this.Controls.Add(this.btncambios);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.label4);
@@ -183,6 +224,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btncambios;
+        private System.Windows.Forms.Button btneliminar;
+        private System.Windows.Forms.Button btncancelar;
     }
 }
 
